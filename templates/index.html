@@ -5,25 +5,16 @@
     <meta charset="UTF-8">
     <title>Hello World in Vue.js</title>
   </meta>
-  <script src="{{ url_for('static', filename='vue.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
   <body>
 
     <div id="app">
       <h1>{{ msg }}</h1>
-      <h1>There are supposed to be a message up there</h1>
+      <!-- <h1>There are supposed to be a message up there</h1> -->
     </div>
 
-    <script>
-      new Vue({
-        el: "#app",
-        data() {
-          return {
-            msg: "This is a home page!"
-          }
-        }
-      });
-    </script>
+    <script src="index.js"></script>
 
   </body>
 </html>
