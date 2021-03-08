@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+  <body>
+
+<form
+  id="app"
+  @submit="checkForm"
+  action="https://vuejs.org/"
+  method="post"
+>
+
+  <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+
+  <p>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      v-model="name"
+      type="text"
+      name="name"
+    >
+  </p>
+
+  <p>
+    <label for="hp">Nomor Handphone</label>
+    <input
+      id="hp"
+      v-model="hp"
+      type="number"
+      name="hp"
+      min="0"
+    >
+  </p>
+
+  <p>
+    <label for="tipe">Tipe Mobil</label>
+    <select
+      id="tipe"
+      v-model="tipe"
+      name="tipe"
+    >
+      <option>Baleno</option>
+      <option>Jimmy</option>
+      <option>Ignis</option>
+    </select>
+  </p>
+
+  <p>
+    <input
+      type="submit"
+      value="Submit"
+    >
+  </p>
+
+</form>
+
+
+    <script src="{{ url_for('static', filename='form.js') }}
+
+"></script>
+
+  </body>
+</html>
